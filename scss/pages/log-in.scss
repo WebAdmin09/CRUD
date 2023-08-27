@@ -1,0 +1,103 @@
+@use "../global.scss";
+.login {
+    width: 100%;
+    height: 100vh;
+    background: url("../../images/backimg.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login__wrapper {
+    padding: 50px;
+    border: 3px solid #9d9f99;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.heading__login {
+    font-size: 50px;
+    color: white;
+    margin-bottom: 50px;
+}
+.login__span {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 30px;
+}
+.input__email {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    background: none;
+    outline: none;
+    border: 2px solid rgb(185, 182, 182);
+    padding: 10px;
+    min-width: 350px;
+}
+.input__email::placeholder {
+    color: white;
+}
+.input__password::placeholder {
+    color: white;
+}
+.input__password {
+    color: rgb(250, 250, 250);
+    background: none;
+    outline: none;
+    border: 2px solid rgb(185, 182, 182);
+    padding: 10px;
+    min-width: 350px;
+}
+.login-btn {
+    margin-top: 50px;
+    color: rgb(250, 250, 250);
+    background: none;
+    outline: none;
+    border: 2px solid rgb(185, 182, 182);
+    padding: 10px;
+    min-width: 350px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.login-btn:hover {
+    border: 2px solid white;
+    background-color: white;
+    color: red;
+    transition: 0.5s;
+}
+.inputs {
+    color: #e9736f;
+    background: none;
+    outline: none;
+    border: 2px solid #e9736f;
+    padding: 10px;
+    min-width: 350px;
+}
+.inputs::placeholder {
+    color: #e9736f;
+}
+.hintBtn {
+    margin-top: 20px;
+    color: rgb(250, 250, 250);
+    background: rgb(185, 182, 182);
+    outline: none;
+    border: 2px solid rgb(185, 182, 182);
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.hints{
+    color: white;
+}
+.error1{
+    color: #ff0800;
+    font-size: 15px;
+    margin-bottom: 50px;
+
+}
+.error2{
+    color: #ff0a02;
+    font-size: 15px;
+}

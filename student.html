@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="./css/student.css">
+</head>
+<script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script defer type="module" src="./js/const-student.js"></script>
+<script defer type="module" src="./js/mode-student.js"></script>
+<script defer type="module" src="./js/main-student.js"></script>
+<script defer type="module" src="./js/student.js"></script>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar__wrapper">
+            <h1 class="heading__navbar">Student</h1>
+            <div class="selects">
+                <select name="teachers" class="select__marry select__teachers">
+                </select>
+                <select name="select1" class="select__marry">
+                    <option value="false">Yes</option>
+                    <option value="true">No</option>
+                </select>
+                <select name="select2" class="select__sort">
+                    <option value="A-Z">A-Z</option>
+                    <option value="Z-A">Z-A</option>
+                </select>
+                <button class="add__btn">Add Student</button>
+            </div>
+            <div class="mode">
+                <img class="dark__mode" src="./images/Dark-mode.svg" alt="Dark-mode">
+                <img class="light__mode" src="./images/icons8-brightness.gif" alt="Light__mode">
+            </div>
+        </div>
+        <section class="search__section">
+            <div class="container">
+                <div class="search__wrapper">
+                    <div class="all__wrapper">
+                        All Student: <span class="all__person"></span>
+                    </div>
+                    <input type="search" name="search" class="search__input" placeholder="Search something......">
+                </div>
+            </div>
+        </section>
+    </nav>
+
+    <section class="card__section">
+        <div class="container">
+            <div class="card__wrapper">
+
+            </div>
+            <div class="loading">
+                <div class="lds-spinner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modal -->
+    <div class="modal">
+        <div class="container">
+            <div class="modal__wrapper">
+                <div class="modal__nav">
+                    <h2 class="modal__title">Add Section</h2>
+                    <span class="xmark__btn">&times;</span>
+                </div>
+                <div class="inputs">
+                    <form class="input__form">
+                        <input type="text" class="selected-input">
+                        <span class="up__title">FirstName</span>
+                        <input type="text" class="input__firstname" required>
+                        <span class="up__title">LastName</span>
+                        <input type="text" class="input__lastname" required>
+                        <span class="up__title">PhoneNumber</span>
+                        <input type="tel" class="input__number" required>
+                        <span class="up__title">Url Image</span>
+                        <input type="url" class="input__url" required>
+                        <span class="up__title">Email</span>
+                        <input type="email" class="input__email" required>
+                        <span class="up__title">Birthday</span>
+                        <input type="date" class="input__birthday" required>
+                        <div class="inputs__check-div">
+                            <input type="checkbox" name="checkbox" class="input__check">
+                            <span class="up__title">IsWork</span>
+                        </div>
+                        <div class="modal__btn">
+                            <button type="button" class="xmark__btn2 btn__modal">
+                              Close
+                            </button>
+                            <button type="submit" class="add-save-teacher-btn btn__modal">
+                              Add new Student
+                            </button>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
