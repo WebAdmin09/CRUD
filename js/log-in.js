@@ -17,7 +17,7 @@ inputBtn.addEventListener('click', () => {
         inputEmail.classList.add('input__email')
         inputpassword.classList.remove('inputs')
         inputpassword.classList.add('input__password')
-        window.location.href = '../index.html'
+        window.location.href = '../teacher.html'
     }
     else {
         inputEmail.classList.add('inputs')

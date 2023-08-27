@@ -5,30 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teachers</title>
-    <link rel="stylesheet" href="../css/index.css">
+    <title>Students</title>
+    <link rel="stylesheet" href="./css/student.css">
 </head>
 <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script defer type="module" src="../js/const.js"></script>
-<script defer type="module" src="../js/mode.js"></script>
-<script defer type="module" src="../js/main.js"></script>
-<script defer type="module" src="../js/teacher.js"></script>
+<script defer type="module" src="../js/const-student.js"></script>
+<script defer type="module" src="../js/mode-student.js"></script>
+<script defer type="module" src="../js/main-student.js"></script>
+<script defer type="module" src="../js/student.js"></script>
 
 <body>
     <nav class="navbar">
         <div class="navbar__wrapper">
-            <h1 class="heading__navbar">Teacher</h1>
+            <h1 class="heading__navbar">Student</h1>
             <div class="selects">
+                <select name="teachers" class="select__marry select__teachers">
+                </select>
                 <select name="select1" class="select__marry">
-                    <option value="all">All</option>
-                    <option value="false">Single</option>
-                    <option value="true">Married</option>
+                    <option value="false">Yes</option>
+                    <option value="true">No</option>
                 </select>
                 <select name="select2" class="select__sort">
                     <option value="A-Z">A-Z</option>
                     <option value="Z-A">Z-A</option>
                 </select>
-                <button class="add__btn">Add Teachers</button>
+                <button class="add__btn">Add Student</button>
             </div>
             <div class="mode">
                 <img class="dark__mode" src="../images/Dark-mode.svg" alt="Dark-mode">
@@ -39,7 +40,7 @@
             <div class="container">
                 <div class="search__wrapper">
                     <div class="all__wrapper">
-                        All Person: <span class="all__person"></span>
+                        All Student: <span class="all__person"></span>
                     </div>
                     <input type="search" name="search" class="search__input" placeholder="Search something......">
                 </div>
@@ -68,7 +69,6 @@
                     <div></div>
                 </div>
             </div>
-            <ul class="pagination"></ul>
         </div>
     </section>
     <!-- Modal -->
@@ -92,16 +92,18 @@
                         <input type="url" class="input__url" required>
                         <span class="up__title">Email</span>
                         <input type="email" class="input__email" required>
+                        <span class="up__title">Birthday</span>
+                        <input type="date" class="input__birthday" required>
                         <div class="inputs__check-div">
                             <input type="checkbox" name="checkbox" class="input__check">
-                            <span class="up__title">IsMarried</span>
+                            <span class="up__title">IsWork</span>
                         </div>
                         <div class="modal__btn">
                             <button type="button" class="xmark__btn2 btn__modal">
                                 Close
                             </button>
                             <button type="submit" class="add-save-teacher-btn btn__modal">
-                                Add new Teacher
+                                Add new Student
                             </button>
                         </div>
                     </form>
