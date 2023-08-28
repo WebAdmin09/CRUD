@@ -38,8 +38,15 @@ export function createTeacher(teacher) {
 
     const teacherNumber = document.createElement('h5');
     teacherNumber.className = 'teacherNumber';
-    teacherNumber.innerHTML = `Phone: ${phoneNumber}`;
+    teacherNumber.innerHTML = `Phone: ${createregex(phoneNumber)}`;
 
+    function createregex(phoneNumber) {
+        let format = '(xxx) xx xx xx';
+        for (let i = 0; i < phoneNumber.length; i++) {
+            format = format.replace('x', phoneNumber[i]);
+        }
+        return format
+    }
 
     const teacherMarry = document.createElement('span');
     teacherMarry.className = 'teacherMarry';

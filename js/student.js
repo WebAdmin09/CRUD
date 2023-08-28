@@ -46,8 +46,15 @@ export function createStudent(student) {
 
     const teacherNumber = document.createElement('h5');
     teacherNumber.className = 'teacherNumber';
-    teacherNumber.innerHTML = `Phone: ${phoneNumber}`;
+    teacherNumber.innerHTML = `Phone: ${createregex(phoneNumber)}`;
 
+    function createregex(phoneNumber) {
+        let format = '(xxx) xx xx xx';
+        for (let i = 0; i < phoneNumber.length; i++) {
+            format = format.replace('x', phoneNumber[i]);
+        }
+        return format
+    }
 
     const studentIsWork = document.createElement('span');
     studentIsWork.className = 'teacherMarried';
@@ -63,7 +70,7 @@ export function createStudent(student) {
     studentBtn.addEventListener('click', () => {
         localStorage.setItem('teacherId', id)
         setTimeout(() => {
-            window.location.href = './index.html'
+            window.location.href = './teacher.html'
         }, 0)
     })
 
@@ -104,20 +111,20 @@ async function deleteStudent(data) {
     const studentId = data.id;
     let teacherId = localStorage.getItem('teacherId');
     await request.delete(`teacher/${teacherId}/student/${studentId}`);
-    getStudents({teacher_id: localStorage.getItem("teacherId")})
+    getStudents({ teacher_id: localStorage.getItem("teacherId") })
 }
 
 export const selectMarry = document.querySelector('.select__marry');
 
 selectMarry.addEventListener('change', async (e) => {
-    getStudents({teacher_id: localStorage.getItem("teacherId")})
+    getStudents({ teacher_id: localStorage.getItem("teacherId") })
 })
 
 
 export const selectSort = document.querySelector('.select__sort');
 
 selectSort.addEventListener('change', async (e) => {
-    getStudents({teacher_id: localStorage.getItem("studenId")})
+    getStudents({ teacher_id: localStorage.getItem("studenId") })
 })
 
 
